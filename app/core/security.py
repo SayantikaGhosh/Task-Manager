@@ -4,6 +4,8 @@ import os
 from dotenv import load_dotenv
 from jose import JWTError, jwt
 from fastapi import HTTPException, status
+from jose import JWTError, jwt
+from fastapi import HTTPException, status
 
 
 pwd_context = CryptContext(schemes=["bcrypt"],deprecated="auto")
@@ -33,8 +35,7 @@ def create_access_token(data: dict):
     
     return encoded_jwt
 
-from jose import JWTError, jwt
-from fastapi import HTTPException, status
+
 
 
 def verify_token(token: str):

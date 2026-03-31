@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from app.db.database import engine, Base
-from app.models import user
-from app.routes import auth
+from app.models import user, task
+from app.routes import auth, tasks
+
+
 
 app = FastAPI()
 
@@ -12,3 +14,6 @@ def read_root():
     return {"message":"Hey Bitches!!!!!!"}
 
 app.include_router(auth.router)
+
+
+app.include_router(tasks.router)
