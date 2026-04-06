@@ -11,7 +11,7 @@ Base.metadata.create_all(bind=engine) #creates all table define using Base
 
 @app.get("/")
 def read_root():
-    return {"message":"Hey Bitches!!!!!!"}
+    return {"message":"Hello!!!!!!"}
 
 app.include_router(auth.router)
 
